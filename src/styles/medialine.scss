@@ -1,0 +1,41 @@
+.header-medialine {
+    position: absolute;
+    left: 20px; 
+    top: 0; 
+    width: 32px;
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    .line {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 192px;
+            top: 0; 
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ABB2BF;
+        }
+    }
+    
+    .icons {
+        margin-top: 200px; 
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        
+        a {
+            color: #ABB2BF;
+            font-size: 23px;
+            transition: color 0.3s ease;
+            &:hover {
+                color: #FFFFFF;
+            }
+        }
+    }
+}

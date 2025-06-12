@@ -1,0 +1,71 @@
+.project-card {
+    width: 330px;
+    height: auto;
+    border: 1px solid #ABB2BF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    &:hover {
+        transform: translateY(-10px);
+    }
+    .project-image {
+        width: 100%;
+        height: 200px;
+        border-bottom: 1px solid #ABB2BF;
+        img {
+            width: 100%;
+            height: 100%;
+            image-rendering: -webkit-optimize-contrast;
+            filter: contrast(1.05) brightness(1.02);
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+    }
+    .project-details{
+        .project-techs {
+            h5 {
+                border-bottom: 1px solid #ABB2BF;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: normal;
+                color: #ABB2BF;
+            }
+        }
+        .project-content{
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            h3{
+                font-size: 24px;
+                font-weight: medium;
+                color: #FFFFFF;
+            }
+            p{
+                font-size: 16px;
+                color: #ABB2BF;
+            }
+            a{
+                color: #ABB2BF;
+                text-decoration: none;
+                padding: 15px 20px;
+                border: 1px solid #ABB2BF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                margin: 10px;
+                transition: all 0.3s ease;
+                .arrow-icon {
+                    margin-left: 5px;
+                }
+                &:hover{
+                    border: 1px solid #C778DD;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

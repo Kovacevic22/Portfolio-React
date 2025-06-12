@@ -1,0 +1,80 @@
+.footer{
+    margin-top: 100px;
+    border-top: 1px solid #ABB2BF;
+    .footer-container{
+        max-width: 1224px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        .footer-leftside {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            .footer-logo {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                a {
+                    h2{
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        span{
+                            color: #C778DD;
+                        }
+                    }
+                }
+                p{
+                    color: #ABB2BF;
+                    font-size: 16px;
+                }
+            }
+            .footer-text{
+                color: #ABB2BF;
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+        .footer-rightside {
+            align-self: flex-end;
+            .footer-links{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: #FFFFFF;
+                h3{
+                    color: #FFFFFF;
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                .footer-media {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        color: #ABB2BF;
+                        font-size: 21px;
+                        transition: color 0.3s ease;
+                        &:hover {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .footer-copyright{
+        text-align: center;
+        padding: 10px;
+        color: #ABB2BF;
+        font-size: 16px;
+    }
+}

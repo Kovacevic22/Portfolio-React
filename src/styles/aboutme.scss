@@ -1,0 +1,130 @@
+.aboutme {
+    position: relative;
+
+    .aboutme-container {
+        max-width: 1224px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        @media (max-width: 1112px) {
+            gap: 0px;          
+        }
+        @media (max-width: 910px) {
+            justify-content: center;          
+        }
+        .aboutme-leftside {
+            display: flex;
+            flex-direction: column;
+
+            .aboutme-header {
+                padding: 20px 0;
+
+                h2 {
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    font-size: 32px;
+                    position: relative;
+
+                    span {
+                        color: #C778DD;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 1px;
+                        background-color: #C778DD;
+                        width: 300px;
+                        left: 190px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        @media (max-width: 700px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .aboutme-content {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                max-width: 600px;
+                color: #ABB2BF;
+                @media (max-width: 1112px) {
+                    max-width: none;
+                    gap: 10px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 1.8;
+                    @media (max-width: 1112px) {
+                        font-size: 14px;
+                    }
+                }
+
+                a {
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 10px 20px;
+                    border: 1px solid #C778DD;
+                    width: fit-content;
+                    transition: background-color 0.3s ease-in;
+                    @media (max-width: 1112px) {
+                        font-size: 14px;
+                    }
+                    &:hover {
+                        background-color: #C778DD;
+                    }
+                }
+            }
+        }
+
+        .aboutme-rightside {
+            .aboutme-img {
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 450px;
+                    @media (max-width: 1112px) {
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 91px;
+        height: 91px;
+        border: 1px solid #ABB2BF;
+        border-left: none;
+        @media (max-width: 1440px) {
+            display: none;
+        }
+    }
+    &::before{
+        content: '. . . .\A. . . .\A. . . .\A. . . .\A. . . .';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border-right: none;
+        white-space: pre;
+        color: #ABB2BF;
+        @media (max-width: 1440px) {
+            display: none;
+        } 
+    }
+}

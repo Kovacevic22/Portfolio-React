@@ -1,0 +1,78 @@
+.contacts {
+    position: relative;
+    .contacts-container {
+        max-width: 1224px;
+        margin: 0 auto;
+        padding: 20px 20px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        .contacts-leftside{
+            max-width: 510px;
+            .contacts-header{
+                padding: 20px 0;
+                h2 {
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    font-size: 32px;
+                    position: relative;
+
+                    span {
+                        color: #C778DD;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 1px;
+                        background-color: #C778DD;
+                        width: 300px;
+                        left: 190px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        @media (max-width: 700px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .contacts-content {
+                color: #ABB2BF;
+                font-size: 16px;
+            }
+        }
+        .contacts-rightside {
+            border: 1px solid #ABB2BF;
+            align-self: flex-end;
+            padding: 16px;
+            color: #ABB2BF;
+            @media (max-width: 910px) {
+                margin: 0 auto;
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 16px;
+                color: #FFFFFF;
+                margin-bottom: 10px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                margin-bottom: 10px;
+                span {
+                color: #ABB2BF;
+                }
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

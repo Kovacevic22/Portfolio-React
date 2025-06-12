@@ -1,0 +1,178 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    
+    .header-medialine {
+        @media (max-width: 1330px) {
+            display: none;
+        }
+    }
+    
+    .header-container{
+        max-width: 1224px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100px;
+        
+        .header-logo {
+            a{
+                text-decoration: none;
+                h2{
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    font-size: 16px;
+                    span {
+                        color: #C778DD;
+                    }
+                }
+            }
+        }
+        
+        .header-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+            @media (max-width: 512px) {
+                display: none;
+            }
+            
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                flex-wrap: wrap;
+                gap: 30px;
+                
+                li{
+                    font-size: 16px;
+                    a{
+                        color: #ABB2BF;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                        span{
+                            color: #C778DD !important;
+                        }
+                        &:hover{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            
+            .language-dropdown {
+                .selected-lang {
+                    color: #ABB2BF;
+                    font-size: 16px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-weight: 500;
+                    transition: color 0.3s ease;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                .dropdown-options {
+                    display: none;
+                }
+            }
+        }
+        
+        // Hamburger button
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #ABB2BF;
+            z-index: 1001;
+            transition: color 0.3s ease;
+            margin-right: 20px;
+            
+            &:hover {
+                color: #C778DD;
+            }
+            
+            @media (max-width: 512px) {
+                display: block;
+            }
+        }
+        
+        // Mobile menu
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: rgba(40, 44, 52, 0.98);
+            backdrop-filter: blur(10px);
+            border-left: 1px solid #C778DD;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            padding: 100px 30px 30px;
+            
+            &.active {
+                right: 0;
+            }
+            
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                
+                li {
+                    margin: 25px 0;
+                    
+                    a {
+                        color: #ABB2BF;
+                        text-decoration: none;
+                        font-size: 18px;
+                        display: block;
+                        padding: 12px 0;
+                        transition: color 0.3s ease;
+                        border-bottom: 1px solid rgba(171, 178, 191, 0.1);
+                        
+                        span {
+                            color: #C778DD;
+                            margin-right: 8px;
+                        }
+                        
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            
+            .mobile-lang {
+                margin-top: 40px;
+                padding-top: 25px;
+                border-top: 1px solid rgba(199, 120, 221, 0.3);
+                
+                span {
+                    color: #ABB2BF;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: color 0.3s ease;
+                    
+                    &:hover {
+                        color: #C778DD;
+                    }
+                }
+            }
+        }
+    }
+}

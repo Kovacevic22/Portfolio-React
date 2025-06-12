@@ -1,0 +1,113 @@
+.skills-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    //gap: 10px;
+    
+    .skills {
+        max-width: 1224px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @media (max-width: 1112px) {
+            gap: 0px;
+        }
+        .skills-title {
+            padding: 20px 0;
+            @media (max-width:910px){
+                padding: 0;
+            }
+            h2 {
+                color: #FFFFFF;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: auto;
+                position: relative;
+                span {
+                    color: #C778DD;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    background-color: #C778DD; 
+                    width: 300px;
+                    left: 150px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @media (max-width: 700px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        .skills-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0;
+            width: 100%;
+            @media (max-width:910px){
+                padding: 0;
+            }
+            @media (max-width:512px){
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            .skills-left-side {
+                flex: 0 0 auto;
+                @media (max-width:768px){
+                    align-self: center;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 349px;
+                    @media (max-width: 1112px) {
+                        max-width: 280px;
+                    }
+                    @media (max-width: 425px) {
+                        display: none;
+                    }
+                }
+            }
+            
+            .skills-right-side {
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+                gap: 16px;
+                @media (max-width: 512px) {
+                    justify-content: center;
+                }
+                .skills-right-side-content {
+                    width: 180px;
+                    height: auto;
+                    border: 1px solid #ABB2BF;
+                    background-color: transparent;
+                    //box-sizing: border-box;
+                    padding: 10px;
+                    h3 {
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        font-weight: semibold;
+                        border-bottom: 1px solid #ABB2BF;
+                    }
+                    
+                    p {
+                        color: #ABB2BF;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
