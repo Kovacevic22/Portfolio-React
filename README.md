@@ -1,6 +1,8 @@
 ## 🚀 Live Demo  
 **The project is in progress.**  
-🔗 [View on Vercel](https://portfolio-react-nine-green.vercel.app/)
+🔗 [View on Vercel](https://portfolio-react-nine-green.vercel.app/)  
+
+📱 **The page is fully responsive** and works seamlessly on all devices.
 
 ---
 
